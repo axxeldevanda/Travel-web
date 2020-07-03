@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Details')
+@section('title','Detail')
 
 @push('prepend-style')
 <link rel="stylesheet" href="{{url('frontend/libraries/xzoom/xzoom.css')}}">
@@ -36,29 +36,29 @@
                         <p>Republic of Indonesia Raya</p>
                         <div class="gallery">
                             <div class="xzoom-container">
-                                <img src="frontend/images/details.jpg" class="xzoom" id="xzoom-default"
-                                    xoriginal="frontend/images/details.jpg">
+                                <img src="{{url('frontend/images/details.jpg')}}" class="xzoom" id="xzoom-default"
+                                    xoriginal="{{url('frontend/images/details.jpg')}}">
                             </div>
                             <div class="xzoom-thumbs">
-                                <a href="frontend/images/details.jpg">
-                                    <img src="frontend/images/details.jpg" class="xzoom-gallery" width="128"
-                                        xpreview="frontend/images/details.jpg">
+                                <a href="{{url('frontend/images/details.jpg')}}">
+                                    <img src="{{url('frontend/images/details.jpg')}}" class="xzoom-gallery" width="128"
+                                        xpreview="{{url('frontend/images/details.jpg')}}">
                                 </a>
-                                <a href="frontend/images/details-2.jpg">
-                                    <img src="frontend/images/details-2.jpg" class="xzoom-gallery" width="128"
-                                        xpreview="frontend/images/details-2.jpg">
+                                <a href="{{url('frontend/images/details-2.jpg')}}">
+                                    <img src="{{url('frontend/images/details-2.jpg')}}" class="xzoom-gallery"
+                                        width="128" xpreview="{{url('frontend/images/details-2.jpg')}}">
                                 </a>
-                                <a href="frontend/images/details.jpg">
-                                    <img src="frontend/images/details.jpg" class="xzoom-gallery" width="128"
-                                        xpreview="frontend/images/details.jpg">
+                                <a href="{{url('frontend/images/details.jpg')}}">
+                                    <img src="{{url('frontend/images/details.jpg')}}" class="xzoom-gallery" width="128"
+                                        xpreview="{{url('frontend/images/details.jpg')}}">
                                 </a>
-                                <a href="frontend/images/details.jpg">
-                                    <img src="frontend/images/details.jpg" class="xzoom-gallery" width="128"
-                                        xpreview="frontend/images/details.jpg">
+                                <a href="{{url('frontend/images/details.jpg')}}">
+                                    <img src="{{url('frontend/images/details.jpg')}}" class="xzoom-gallery" width="128"
+                                        xpreview="{{url('frontend/images/details.jpg')}}">
                                 </a>
-                                <a href="frontend/images/details.jpg">
-                                    <img src="frontend/images/details.jpg" class="xzoom-gallery" width="128"
-                                        xpreview="frontend/images/details.jpg">
+                                <a href="{{url('frontend/images/details.jpg')}}">
+                                    <img src="{{url('frontend/images/details.jpg')}}" class="xzoom-gallery" width="128"
+                                        xpreview="{{url('frontend/images/details.jpg')}}">
                                 </a>
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                         </table>
                     </div>
                     <div class="join-container">
-                        <a href="checkout.html" class="btn btn-block btn-join-now mt-3 py-2">Join Now</a>
+                        <a href="{{url('checkout')}}" class="btn btn-block btn-join-now mt-3 py-2">Join Now</a>
                     </div>
                 </div>
             </div>

@@ -57,41 +57,41 @@ NOMADS
             <div class="section-popular-travel row justify-content-center">
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card-travel text-center d-flex flex-column"
-                        style="background-image: url('frontend/images/popular-1.jpg');">
+                        style="background-image: url('{{url('frontend/images/popular-1.jpg')}}');">
                         <div class="travel-country">INDONESIA</div>
                         <div class="travel-location">BERATAN, BALI</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{ route('detail')}}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card-travel text-center d-flex flex-column"
-                        style="background-image: url('frontend/images/popular-2.jpg');">
+                        style="background-image: url('{{url('frontend/images/popular-2.jpg')}}');">
                         <div class="travel-country">INDONESIA</div>
                         <div class="travel-location">BROMO, MALANG</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{route('detail')}}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card-travel text-center d-flex flex-column"
-                        style="background-image: url('frontend/images/popular-3.jpg');">
+                        style="background-image: url('{{url('frontend/images/popular-3.jpg')}}');">
                         <div class="travel-country">INDONESIA</div>
                         <div class="travel-location">NUSA PENINDA</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{route('detail')}}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card-travel text-center d-flex flex-column"
-                        style="background-image: url('frontend/images/popular-4.jpg');">
+                        style="background-image: url('{{url('frontend/images/popular-4.jpg')}}');">
                         <div class="travel-country">MIDDLE EAST</div>
                         <div class="travel-location">DUBAI</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">View Details</a>
+                            <a href="{{route('detail')}}" class="btn btn-travel-details px-4">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ NOMADS
                     </p>
                 </div>
                 <div class="col-md-8 text-center">
-                    <img src="frontend/images/partners.png" alt="Logo Partners" class="img-partner">
+                    <img src="{{url('frontend/images/partners.png')}}" alt="Logo Partners" class="img-partner">
                 </div>
             </div>
         </div>
@@ -135,7 +135,8 @@ NOMADS
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
-                            <img src="frontend/images/testimonial-1.png" alt="User" class="mb-4 rounded-circle">
+                            <img src="{{url('frontend/images/testimonial-1.png')}}" alt="User"
+                                class="mb-4 rounded-circle">
                             <h3 class="mb-4">Angga Risky</h3>
                             <p class="testimonial">“ It was glorious and I could
                                 not stop to say wohooo for
@@ -152,7 +153,8 @@ NOMADS
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
-                            <img src="frontend/images/testimonial-2.png" alt="User" class="mb-4 rounded-circle">
+                            <img src="{{url('frontend/images/testimonial-2.png')}}" alt="User"
+                                class="mb-4 rounded-circle">
                             <h3 class="mb-4">Shayna</h3>
                             <p class="testimonial">“ The trip was amazing and
                                 I saw something beautiful in
@@ -169,7 +171,8 @@ NOMADS
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
-                            <img src="frontend/images/testimonial-3.png" alt="User" class="mb-4 rounded-circle">
+                            <img src="{{url('frontend/images/testimonial-3.png')}}" alt="User"
+                                class="mb-4 rounded-circle">
                             <h3 class="mb-4">Shabrina</h3>
                             <p class="testimonial">“ I loved it when the waves
                                 was shaking harder — I was

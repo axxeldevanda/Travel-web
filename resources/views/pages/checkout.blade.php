@@ -1,9 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.checkout')
 
-@section('title')
-Checkout
+@section('title','Checkout')
 
-@endsection
+@push('prepend-style')
+<link rel="stylesheet" href="{{url('frontend/libraries/gijgo/css/gijgo.min.css')}}">
+
+@endpush
 
 @section('content')
 <main>
@@ -52,7 +54,7 @@ Checkout
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <img src="frontend/images/avatar-1.png" height="60">
+                                            <img src="{{url('frontend/images/avatar-1.png')}}" height="60">
                                         </td>
                                         <td class="align-middle">
                                             Angga Risky
@@ -68,13 +70,13 @@ Checkout
                                         </td>
                                         <td class="align-middle">
                                             <a href="">
-                                                <img src="frontend/images/ic_remove.png" alt="">
+                                                <img src="{{'frontend/images/ic_remove.png'}}" alt="">
                                             </a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="frontend/images/avatar-2.png" height="60">
+                                            <img src="{{url('frontend/images/avatar-2.png')}}" height="60">
                                         </td>
                                         <td class="align-middle">
                                             Galih Pratama
@@ -90,7 +92,7 @@ Checkout
                                         </td>
                                         <td class="align-middle">
                                             <a href="">
-                                                <img src="frontend/images/ic_remove.png" alt="">
+                                                <img src="{{"frontend/images/ic_remove.png"}}" alt="">
                                             </a>
                                         </td>
                                     </tr>
@@ -169,7 +171,7 @@ Checkout
                         </p>
                         <div class="bank">
                             <div class="bank-item pb-3">
-                                <img src="frontend/images/ic_bank.png" alt="" class="bank-image">
+                                <img src="{{"frontend/images/ic_bank.png"}}" alt="" class="bank-image">
                                 <div class="description">
                                     <h3>PT Nomads ID</h3>
                                     <p>
@@ -181,7 +183,7 @@ Checkout
 
                             </div>
                             <div class="bank-item pb-3">
-                                <img src="frontend/images/ic_bank.png" alt="" class="bank-image">
+                                <img src="{{"frontend/images/ic_bank.png"}}" alt="" class="bank-image">
                                 <div class="description">
                                     <h3>PT Nomads ID</h3>
                                     <p>
@@ -194,11 +196,12 @@ Checkout
                         </div>
                     </div>
                     <div class="join-container">
-                        <a href="success.html" class="btn btn-block btn-join-now mt-3 py-2">I Have Made Payment</a>
+                        <a href="{{route('checkout-success')}}" class="btn btn-block btn-join-now mt-3 py-2">I Have Made
+                            Payment</a>
 
                     </div>
                     <div class="text-center mt-3">
-                        <a href="index.html" class="text-muted" style="color: aliceblue;">Cancel Booking</a>
+                        <a href="{{route('detail')}}" class="text-muted" style="color: aliceblue;">Cancel Booking</a>
                     </div>
                 </div>
             </div>
@@ -207,3 +210,19 @@ Checkout
     </section>
 </main>
 @endsection
+
+@push('addon-script')
+
+<script src="{{url('frontend/libraries/gijgo/js/gijgo.min.js')}}"></script>
+<script>
+    $(document).ready(function () {
+
+
+            $('.datepicker').datepicker({
+                uiLibrary: 'bootstrap4',
+                icons: {
+                    rightIcon: '<img src="{{url('frontend/images/ic_doe.png')}}" />'
+                }
+            })
+        });
+@endpush
