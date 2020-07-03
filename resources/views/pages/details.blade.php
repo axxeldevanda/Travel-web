@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
-@section('title')
-Details
+@section('title','Details')
 
-@endsection
+@push('prepend-style')
+<link rel="stylesheet" href="{{url('frontend/libraries/xzoom/xzoom.css')}}">
+
+@endpush
 
 @section('content')
 <main>
@@ -150,3 +152,18 @@ Details
     </section>
 </main>
 @endsection
+
+@push('addon-script')
+<script src="{{url('frontend/libraries/xzoom/xzoom.min.js')}}"></script>
+<script>
+    $(document).ready(function () {
+            $('.xzoom, .xzoom-gallery').xzoom({
+                zoomWidth: 500,
+                title: false,
+                tint: '#333',
+                Xoffset: 15
+            });
+        })
+</script>
+
+@endpush
